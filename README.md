@@ -35,3 +35,5 @@ Um platformer com 3 fases de temática e dificuldade crescente, personagem origi
 ---
 
 ## Como rodar localmente
+
+Não precisa de instalação. Só abrir o `index.html` no navegador, ou rodar com um live server (ex: extensão Live Server do VS Code).
