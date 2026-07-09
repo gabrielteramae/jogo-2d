@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Jogo Online</title>
+  <meta name="description"
+    content="Jogo de plataforma 2D no navegador: atravesse o campo, um castelo abandonado e um vulcão em erupção. Double jump, moedas, inimigos e trilha sonora própria." />
+  <meta name="keywords" content="jogo de plataforma, jogo 2d, platformer, jogo navegador, jogo html5" />
+  <meta name="author" content="Gabriel Teramae Chan" />
+  <meta name="robots" content="index, follow" />
+  <meta name="language" content="pt-BR" />
+  <meta name="theme-color" content="#0c1024" />
+  <link rel="canonical" href="https://gabrielteramae.github.io/jogo-plataforma/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Jogo Online | Aventura 2D em 3 fases" />
+  <meta property="og:description"
+    content="Jogo de plataforma 2D no navegador: atravesse o campo, um castelo abandonado e um vulcão em erupção. Double jump, moedas, inimigos e trilha sonora própria." />
+  <meta property="og:url" content="https://gabrielteramae.github.io/jogo-plataforma/" />
+  <meta property="og:site_name" content="Jogo Online" />
+  <meta property="og:image" content="https://gabrielteramae.github.io/jogo-plataforma/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="pt_BR" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Jogo Online | Aventura 2D em 3 fases" />
+  <meta name="twitter:description"
+    content="Jogo de plataforma 2D no navegador: atravesse o campo, um castelo abandonado e um vulcão em erupção. Double jump, moedas, inimigos e trilha sonora própria." />
+  <meta name="twitter:image" content="https://gabrielteramae.github.io/jogo-plataforma/og-image.png" />
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="game-wrap">
+    <div class="hud">
+      <span id="score">Moedas: 0</span>
+      <span id="lives">Vidas: 3</span>
+      <span id="level">Fase: 1/3</span>
+      <button id="menu-button" aria-label="Abrir menu">☰</button>
+    </div>
+    <canvas id="game" width="960" height="540"></canvas>
+    <div class="overlay" id="overlay" hidden>
+      <h1 id="overlay-title"></h1>
+      <button id="overlay-button">Jogar de novo</button>
+    </div>
+    <div class="overlay menu-screen" id="menu-main">
+      <h1>Jogo Online</h1>
+      <button class="menu-btn" id="menu-start">Iniciar Jogo</button>
+      <button class="menu-btn" id="menu-levels-open">Fases</button>
+      <button class="menu-btn" id="menu-settings-open">Configurações</button>
+    </div>
+    <div class="overlay menu-screen" id="menu-levels" hidden>
+      <h2>Escolher Fase</h2>
+      <button class="menu-btn" data-level="0">Fase 1 — Campo</button>
+      <button class="menu-btn" data-level="1">Fase 2 — Castelo</button>
+      <button class="menu-btn" data-level="2">Fase 3 — Vulcão</button>
+      <button class="menu-btn menu-btn-secondary" id="menu-levels-back">Voltar</button>
+    </div>
+    <div class="overlay menu-screen" id="menu-settings" hidden>
+      <h2>Configurações</h2>
+      <button class="menu-btn" id="settings-mute-toggle">Som: Ligado</button>
+      <button class="menu-btn" id="settings-fullscreen-toggle">Tela cheia</button>
+      <button class="menu-btn menu-btn-secondary" id="menu-settings-back">Voltar</button>
+    </div>
+    <p class="hint">Setas/A-D para mover, Espaço/seta pra cima para pular (dá pra pular 2x no ar)</p>
+    <div class="touch-controls">
+      <div class="touch-side">
+        <button class="touch-btn" id="btn-left" aria-label="Mover para esquerda">◀</button>
+        <button class="touch-btn" id="btn-right" aria-label="Mover para direita">▶</button>
+      </div>
+      <button class="touch-btn touch-jump" id="btn-jump" aria-label="Pular">⤒</button>
+    </div>
+  </div>
+  <script src="game.js"></script>
+</body>
+
+</html>
