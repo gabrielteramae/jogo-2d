@@ -1,39 +1,39 @@
-# Jogo Online
+# Jogo 2D — plataforma no canvas
+
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
 
-Jogo de plataforma 2D feito em JavaScript puro com HTML5 Canvas, direto no navegador, sem frameworks e sem build.
+Platformer em canvas, sem framework. Três fases no menu: Campo, Castelo e Vulcão. HUD de moedas, vidas e fase. O canonical do HTML é [gabrielteramae.github.io/jogo-2d](https://gabrielteramae.github.io/jogo-2d/).
 
-## Sobre
-
-Um platformer com 3 fases de temática e dificuldade crescente, personagem original animado, física própria (com double jump), inimigos com comportamentos e aparências diferentes por fase, trilha sonora e efeitos sonoros gerados por código via Web Audio API, e um menu completo com seleção de fase e configurações.
-
-## Funcionalidades
-
-- **3 fases**: Campo, Castelo abandonado e Vulcão em erupção, cada uma com cenário, paleta e inimigos próprios
-- **Personagem** com animação de andar e pulo duplo (double jump)
-- **Inimigos únicos por fase**: slime, fantasma flutuante e criatura de fogo
-- **Física por tempo real** (delta time), consistente independente do FPS
-- **Áudio 100% gerado por código**: música de fundo diferente por fase e efeitos sonoros (pulo, moeda, inimigo derrotado, dano, vitória/derrota), sem arquivos externos
-- **Menu principal**: Iniciar Jogo, seleção de Fases e Configurações (som e tela cheia)
-- **Controles touch** para celular, além do teclado
-- **Tela cheia** e layout responsivo
-
-## Controles
-
-- **Mover**: setas ou A/D
-- **Pular**: espaço ou seta para cima (dá pra pular 2x no ar)
+| Escolha | Motivo |
+| --- | --- |
+| Áudio no próprio `game.js` | Música e efeitos saem da Web Audio API, sem arquivo de som no repositório |
 
 ## Stack
 
-- HTML5 Canvas
-- JavaScript (vanilla, sem frameworks)
-- CSS puro
-- Web Audio API (música e efeitos sonoros)
+- HTML5 Canvas, CSS e JavaScript
+- Web Audio API
+
+## Estrutura
+
+```
+index.html
+style.css
+game.js
+```
+
+## Como rodar
+
+```bash
+git clone https://github.com/gabrielteramae/jogo-2d.git
+cd jogo-2d
+```
+
+Abra `index.html` no navegador.
+
+Controles: setas ou A/D para mover, espaço ou seta para cima para pular (dois pulos). No celular, os botões da tela. O menu também liga e desliga o som e a tela cheia.
 
 ---
 
-## Como rodar localmente
-
-Não precisa de instalação. Só abrir o `index.html` no navegador, ou rodar com um live server (ex: extensão Live Server do VS Code).
+© 2026 Gabriel Teramae Chan
